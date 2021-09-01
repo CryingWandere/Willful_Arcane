@@ -5,8 +5,6 @@
 
 #include "SFML/Graphics/RenderWindow.hpp"
 
-//Класс игрового мира только для туториала
-
 World::World( sf::RenderWindow& window, FontHolder& fonts )
 	:	m_window( window )
 	,	m_view( window.getDefaultView() )
@@ -92,21 +90,13 @@ void World::buildScene()
 	m_hero->setPosition( m_spawnPoint );
 	m_sceneLayers[ MainLayer ]->attachChild( std::move( hero ) );
 
-	/*std::unique_ptr< Hero > left_guy( new Hero( Hero::Warrior, m_textures, m_fonts ) );
-	left_guy->setPosition( -80.f, 60.f );
-	m_hero->attachChild( std::move( left_guy ) );
-
-	std::unique_ptr< Hero > right_guy( new Hero( Hero::Warrior, m_textures, m_fonts ) );
-	right_guy->setPosition( 80.f, 60.f );
-	m_hero->attachChild( std::move( right_guy ) );*/
-
 	//PG
 	std::unique_ptr< NPC > haymaker( new NPC( NPC::PeasantGirl, m_textures, m_fonts ) );
 	haymaker->setPosition( 1920.f, 1080.f );
 	//haymaker->setVelocity( 0.f, 0.f );
 	m_sceneLayers[ MainLayer ]->attachChild( std::move( haymaker ) );
 
-	//addEnemies();
+	addEnemies();
 }
 
 void World::addEnemies()
