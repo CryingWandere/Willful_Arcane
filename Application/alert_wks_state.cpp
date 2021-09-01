@@ -27,13 +27,13 @@ AlertState::AlertState( StateStack& stack, Context context )
 
 	auto okButton = std::make_shared< GUI::ShortButton >( *context.fonts, *context.textures );
 	okButton->setPosition( m_windowSprite.getPosition().x, m_windowSprite.getPosition().y + 105.f );
-	okButton->setText( L"ÎÊ" );
+	okButton->setText( L"ÃÃŠ" );
 	okButton->setCallback( [this]()
 	{
 		requestStatePop();
 	} );
 
-	auto infoLabel = std::make_shared< GUI::Label >( L"ÍÅËÜÇß ÍÀÇÍÀ×ÈÒÜ\n ÄÀÍÍÓŞ ÊËÀÂÈØÓ", *context.fonts );
+	auto infoLabel = std::make_shared< GUI::Label >( L"ÃÃ…Ã‹ÃœÃ‡ÃŸ ÃÃ€Ã‡ÃÃ€Ã—ÃˆÃ’Ãœ\n Ã„Ã€ÃÃÃ“Ã ÃŠÃ‹Ã€Ã‚ÃˆÃ˜Ã“", *context.fonts );
 	infoLabel->setPosition( m_windowSprite.getPosition().x, m_windowSprite.getPosition().y - 80.f );
 
 	m_container.pack( infoLabel );
