@@ -48,20 +48,20 @@ Application::Application( int screenX, int screenY )
 	m_renderWindow.setKeyRepeatEnabled( false );
 	m_renderWindow.setMouseCursorVisible( false );
 
-	//Текстуры
+	//Г’ГҐГЄГ±ГІГіГ°Г»
 
 	m_fonts.load( Fonts::RetroGaming, "Fonts/RetroGaming.ttf" );
-	//Главный задник
+	//ГѓГ«Г ГўГ­Г»Г© Г§Г Г¤Г­ГЁГЄ
 	m_textures.load( Textures::TitleScreen, "Textures/main_menu.jpg" );
-	//Задники
+	//Г‡Г Г¤Г­ГЁГЄГЁ
 	m_textures.load( Textures::MainMenuScreen, "Textures/main_menu.jpg" );
 	m_textures.load( Textures::SettingsScreen, "Textures/settings.jpg" );
 		m_textures.load( Textures::Controls, "Textures/controls.jpg" );
 		m_textures.load( Textures::Image, "Textures/image.jpg" );
-	//Всплывающие окна
+	//Г‚Г±ГЇГ«Г»ГўГ ГѕГ№ГЁГҐ Г®ГЄГ­Г 
 	m_textures.load( Textures::WarningState, "Textures/GUI/warning_state.png" );
 	m_textures.load( Textures::DialogueState, "Textures/GUI/dialogue_state.png" );
-	//Кнопки
+	//ГЉГ­Г®ГЇГЄГЁ
 	m_textures.load( Textures::LockedButton, "Textures/GUI/button_locked.png" );
 	m_textures.load( Textures::DefaultButton, "Textures/GUI/button_default.png" );
 	m_textures.load( Textures::SelectedButton, "Textures/GUI/button_selected.png" );
@@ -75,9 +75,9 @@ Application::Application( int screenX, int screenY )
 	m_textures.load( Textures::DefaultLongButton, "Textures/GUI/longbutton_default.png" );
 	m_textures.load( Textures::SelectedLongButton, "Textures/GUI/longbutton_selected.png" );
 	m_textures.load( Textures::PressedLongButton, "Textures/GUI/longbutton_pressed.png" );
-	//Вспышка
+	//Г‚Г±ГЇГ»ГёГЄГ 
 	m_textures.load( Textures::Flash01, "Textures/level_bgs/flash01.jpg" );
-	//Арты с персонажами для диалоговых окон
+	//ГЂГ°ГІГ» Г± ГЇГҐГ°Г±Г®Г­Г Г¦Г Г¬ГЁ Г¤Г«Гї Г¤ГЁГ Г«Г®ГЈГ®ГўГ»Гµ Г®ГЄГ®Г­
 	m_textures.load( Textures::WarriorF, "Textures/heroes_fgs/warrior/warrior.png" );
 	m_textures.load( Textures::PeasantGirlF, "Textures/npcs_fgs/peasant_girl.png" );
 
