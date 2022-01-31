@@ -5,104 +5,104 @@
 #include "resource_holder.hpp"
 #include "color_identify.hpp"
 
-#include < SFML/Graphics/RectangleShape.hpp >
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 CreditsState::CreditsState( StateStack& stack, Context context )
-	:	State( stack, context )
-	,	m_container()
+    :	State( stack, context )
+    ,	m_container()
 {
-	auto programmer = std::make_shared< GUI::Label >(
-		L"Âåäóùèé ðàçðàáîò÷èê, Òåõíè÷åñêèé äèðåêòîð, Ïðîãðàììèñò, Ãåéìäèçàéíåð",
-		*context.fonts );
-	programmer->setColor( getColor( Colors::Font_muted ) );
-	programmer->setPosition( sf::Vector2f( 960.f, 140.f ) );
-	auto programmer_b = std::make_shared< GUI::Label >(
-		L"Õóäîæíèê òåêñòóð, Äèçàéí óðîâíåé, Äèçàéí èíòåðôåéñà",
-		*context.fonts);
-	programmer_b->setColor( getColor( Colors::Font_muted ) );
-	programmer_b->setPosition( programmer->getPosition() + sf::Vector2f( 0.f, 40.f ) );
-	
-	auto fullname1 = std::make_shared< GUI::Label >( L"Ô¸äîð Àãàôîíîâ", *context.fonts );
-	fullname1->setPosition( programmer_b->getPosition() + sf::Vector2f( 0.f, 70.f ) );
+    auto programmer = std::make_shared< GUI::Label >(
+        L"Ð’ÐµÐ´ÑƒÑ‰Ð¸Ð¹ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº, Ð¢ÐµÑ…Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€, ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð¸ÑÑ‚, Ð“ÐµÐ¹Ð¼Ð´Ð¸Ð·Ð°Ð¹Ð½ÐµÑ€",
+        *context.fonts );
+    programmer->setColor( getColor( Colors::Font_muted ) );
+    programmer->setPosition( sf::Vector2f( 960.f, 140.f ) );
+    auto programmer_b = std::make_shared< GUI::Label >(
+        L"Ð¥ÑƒÐ´Ð¾Ð¶Ð½Ð¸Ðº Ñ‚ÐµÐºÑÑ‚ÑƒÑ€, Ð”Ð¸Ð·Ð°Ð¹Ð½ ÑƒÑ€Ð¾Ð²Ð½ÐµÐ¹, Ð”Ð¸Ð·Ð°Ð¹Ð½ Ð¸Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹ÑÐ°",
+        *context.fonts);
+    programmer_b->setColor( getColor( Colors::Font_muted ) );
+    programmer_b->setPosition( programmer->getPosition() + sf::Vector2f( 0.f, 40.f ) );
 
-	auto HR = std::make_shared< GUI::Label >(
-		L"HR-ìåíåäæåð, Ñöåíàðèñò, Íàððàòèâíûé äèðåêòîð, Êîìïîçèòîð",
-		*context.fonts );
-	HR->setColor( getColor( Colors::Font_muted ) );
-	HR->setPosition( fullname1->getPosition() + sf::Vector2f( 0.f, 120.f ) );
+    auto fullname1 = std::make_shared< GUI::Label >( L"Ð¤Ñ‘Ð´Ð¾Ñ€ ÐÐ³Ð°Ñ„Ð¾Ð½Ð¾Ð²", *context.fonts );
+    fullname1->setPosition( programmer_b->getPosition() + sf::Vector2f( 0.f, 70.f ) );
 
-	auto fullname2 = std::make_shared< GUI::Label >( L"Âàíî Ïàïàøâèëè", *context.fonts );
-	fullname2->setPosition( HR->getPosition() + sf::Vector2f( 0.f, 70.f ) );
+    auto HR = std::make_shared< GUI::Label >(
+        L"HR-Ð¼ÐµÐ½ÐµÐ´Ð¶ÐµÑ€, Ð¡Ñ†ÐµÐ½Ð°Ñ€Ð¸ÑÑ‚, ÐÐ°Ñ€Ñ€Ð°Ñ‚Ð¸Ð²Ð½Ñ‹Ð¹ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€, ÐšÐ¾Ð¼Ð¿Ð¾Ð·Ð¸Ñ‚Ð¾Ñ€",
+        *context.fonts );
+    HR->setColor( getColor( Colors::Font_muted ) );
+    HR->setPosition( fullname1->getPosition() + sf::Vector2f( 0.f, 120.f ) );
 
-	auto artist = std::make_shared< GUI::Label >(
-		L"Àðò-äèðåêòîð, Âåäóùèé õóäîæíèê ïåðñîíàæåé, Êîíöåïò õóäîæíèê, Õóäîæíèê",
-		*context.fonts );
-	artist->setColor( getColor( Colors::Font_muted ) );
-	artist->setPosition( fullname2->getPosition() + sf::Vector2f( 0.f, 120.f ) );
+    auto fullname2 = std::make_shared< GUI::Label >( L"Ð’Ð°Ð½Ð¾ ÐŸÐ°Ð¿Ð°ÑˆÐ²Ð¸Ð»Ð¸", *context.fonts );
+    fullname2->setPosition( HR->getPosition() + sf::Vector2f( 0.f, 70.f ) );
 
-	auto fullname3 = std::make_shared< GUI::Label >( L"Èâàí Ðîãîâ", *context.fonts );
-	fullname3->setPosition( artist->getPosition() + sf::Vector2f( 0.f, 70.f ) );
+    auto artist = std::make_shared< GUI::Label >(
+        L"ÐÑ€Ñ‚-Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€, Ð’ÐµÐ´ÑƒÑ‰Ð¸Ð¹ Ñ…ÑƒÐ´Ð¾Ð¶Ð½Ð¸Ðº Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¹, ÐšÐ¾Ð½Ñ†ÐµÐ¿Ñ‚ Ñ…ÑƒÐ´Ð¾Ð¶Ð½Ð¸Ðº, Ð¥ÑƒÐ´Ð¾Ð¶Ð½Ð¸Ðº",
+        *context.fonts );
+    artist->setColor( getColor( Colors::Font_muted ) );
+    artist->setPosition( fullname2->getPosition() + sf::Vector2f( 0.f, 120.f ) );
 
-	auto web = std::make_shared< GUI::Label >(
-		L"Âåá-ðàçðàáîò÷èê",
-		*context.fonts );
-	web->setColor( getColor( Colors::Font_muted ) );
-	web->setPosition( fullname3->getPosition() + sf::Vector2f( 0.f, 120.f ) );
+    auto fullname3 = std::make_shared< GUI::Label >( L"Ð˜Ð²Ð°Ð½ Ð Ð¾Ð³Ð¾Ð²", *context.fonts );
+    fullname3->setPosition( artist->getPosition() + sf::Vector2f( 0.f, 70.f ) );
 
-	auto fullname4 = std::make_shared< GUI::Label >( L"Àíäðåé Áåëêàíîâ", *context.fonts );
-	fullname4->setPosition( web->getPosition() + sf::Vector2f( 0.f, 70.f ) );
+    auto web = std::make_shared< GUI::Label >(
+        L"Ð’ÐµÐ±-Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº",
+        *context.fonts );
+    web->setColor( getColor( Colors::Font_muted ) );
+    web->setPosition( fullname3->getPosition() + sf::Vector2f( 0.f, 120.f ) );
 
-	auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
-	backButton->setPosition( 960.f, 980.f );
-	backButton->setText( L"ÍÀÇÀÄ" );
-	backButton->setCallback( [ this ]()
-	{
-		requestStatePop();
-		requestStatePush( States::MainMenu );
-	} );
+    auto fullname4 = std::make_shared< GUI::Label >( L"ÐÐ½Ð´Ñ€ÐµÐ¹ Ð‘ÐµÐ»ÐºÐ°Ð½Ð¾Ð²", *context.fonts );
+    fullname4->setPosition( web->getPosition() + sf::Vector2f( 0.f, 70.f ) );
 
-	m_container.pack( programmer );
-	m_container.pack( programmer_b );
-	m_container.pack( fullname1 );
-	m_container.pack( HR );
-	m_container.pack( fullname2 );
-	m_container.pack( artist );
-	m_container.pack( fullname3 );
-	m_container.pack( web );
-	m_container.pack( fullname4 );
+    auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
+    backButton->setPosition( 960.f, 980.f );
+    backButton->setText( L"ÐÐÐ—ÐÐ”" );
+    backButton->setCallback( [ this ]()
+    {
+        requestStatePop();
+        requestStatePush( States::MainMenu );
+    } );
 
-	m_container.pack( backButton );
+    m_container.pack( programmer );
+    m_container.pack( programmer_b );
+    m_container.pack( fullname1 );
+    m_container.pack( HR );
+    m_container.pack( fullname2 );
+    m_container.pack( artist );
+    m_container.pack( fullname3 );
+    m_container.pack( web );
+    m_container.pack( fullname4 );
+
+    m_container.pack( backButton );
 }
 
 void CreditsState::draw()
 {
-	sf::RenderWindow& window = *getContext().window;
+    sf::RenderWindow& window = *getContext().window;
 
-	window.setView( window.getDefaultView() );
+    window.setView( window.getDefaultView() );
 
-	sf::RectangleShape backgroundShape;
-	backgroundShape.setFillColor( getColor( Colors::Menu_background ) );
-	backgroundShape.setSize( window.getView().getSize() );
+    sf::RectangleShape backgroundShape;
+    backgroundShape.setFillColor( getColor( Colors::Menu_background ) );
+    backgroundShape.setSize( window.getView().getSize() );
 
-	window.draw( backgroundShape );
-	window.draw( m_container );
+    window.draw( backgroundShape );
+    window.draw( m_container );
 }
 
 bool CreditsState::update( sf::Time delta )
 {
-	return true;
+    return true;
 }
 
 bool CreditsState::handleEvent( const sf::Event& sfevent )
 {
-	if ( sfevent.type == sf::Event::KeyPressed && sfevent.key.code == sf::Keyboard::Escape )
-	{
-		requestStatePop();
-		requestStatePush( States::MainMenu );
-	}
+    if ( sfevent.type == sf::Event::KeyPressed && sfevent.key.code == sf::Keyboard::Escape )
+    {
+        requestStatePop();
+        requestStatePush( States::MainMenu );
+    }
 
-	m_container.handleEvent( sfevent );
-	return false;
+    m_container.handleEvent( sfevent );
+    return false;
 }

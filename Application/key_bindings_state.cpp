@@ -5,7 +5,7 @@
 #include "resource_holder.hpp"
 #include "utilities.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
 
 KeyBindingsState::KeyBindingsState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -15,19 +15,19 @@ KeyBindingsState::KeyBindingsState( StateStack& stack, Context context )
 
 	m_backgroundSprite.setTexture( texture );
 	
-	addButton( Player::MoveForward, 535.f, L"¬¬≈–’", context );
-	addButton( Player::MoveBack, 535.f + 70.f, L"¬Õ»«", context );
-	addButton( Player::MoveLeft, 535.f + 140.f, L"¬À≈¬Œ", context );
-	addButton( Player::MoveRight, 535.f + 210.f, L"¬œ–¿¬Œ", context );
-	addButton( Player::Attack, 535.f + 280.f, L"¿“¿ ¿", context );
-	addButton( Player::Interact, 535.f + 350.f, L"¬«¿»ÃŒƒ≈…—“¬»≈", context );
-	addButton( Player::ChangeScale, 535.f + 420.f, L"»«Ã≈Õ≈Õ»≈ Ã¿—ÿ“¿¡¿", context );
+	addButton( Player::MoveForward, 535.f, L"–í–í–ï–†–•", context );
+	addButton( Player::MoveBack, 535.f + 70.f, L"–í–ù–ò–ó", context );
+	addButton( Player::MoveLeft, 535.f + 140.f, L"–í–õ–ï–í–û", context );
+	addButton( Player::MoveRight, 535.f + 210.f, L"–í–ü–†–ê–í–û", context );
+	addButton( Player::Attack, 535.f + 280.f, L"–ê–¢–ê–ö–ê", context );
+	addButton( Player::Interact, 535.f + 350.f, L"–í–ó–ê–ò–ú–û–î–ï–ô–°–¢–í–ò–ï", context );
+	addButton( Player::ChangeScale, 535.f + 420.f, L"–ò–ó–ú–ï–ù–ï–ù–ò–ï –ú–ê–°–®–¢–ê–ë–ê", context );
 
 	updateLabels();
 
 	auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	backButton->setPosition( 960.f, 100.f );
-	backButton->setText( L"Õ¿«¿ƒ" );
+	backButton->setText( L"–ù–ê–ó–ê–î" );
 	backButton->setCallback( [ this ]()
 	{
 		requestStatePop();

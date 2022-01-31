@@ -2,8 +2,8 @@
 
 #include "component.hpp"
 
-#include < memory >
-#include < vector >
+#include <memory>
+#include <vector>
 
 namespace GUI
 {

@@ -6,7 +6,7 @@
 #include "resource_identify.hpp"
 #include "text_node.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
+#include <SFML/Graphics/Sprite.hpp>
 
 class NPC : public Entity
 {

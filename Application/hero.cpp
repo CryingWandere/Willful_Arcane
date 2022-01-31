@@ -8,8 +8,8 @@
 #include "resource_holder.hpp"
 #include "utilities.hpp"
 
-#include < SFML/Graphics/RenderTarget.hpp >
-#include < SFML/Graphics/RenderStates.hpp >
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
 
 //global region
 namespace

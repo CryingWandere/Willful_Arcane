@@ -1,11 +1,11 @@
 #include "utilities.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
-#include < cmath >
-#include < random >
-#include < cassert >
+#include <cmath>
+#include <random>
+#include <cassert>
 
 namespace
 {

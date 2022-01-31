@@ -8,8 +8,8 @@
 #include "resource_identify.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 class WarningState : public State
 {

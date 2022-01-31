@@ -4,8 +4,8 @@
 
 #include "bools.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 ImageState::ImageState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -17,7 +17,7 @@ ImageState::ImageState( StateStack& stack, Context context )
 
 	auto ShowDebugInfoButton = std::make_shared< GUI::LongButton >( *context.fonts, *context.textures );
 	ShowDebugInfoButton->setPosition( 960.f, 600.f );
-	ShowDebugInfoButton->setText( L"Œ¬≈–À≈… Œ“À¿ƒ »" );
+	ShowDebugInfoButton->setText( L"–û–í–ï–†–õ–ï–ô –û–¢–õ–ê–î–ö–ò" );
 	ShowDebugInfoButton->setCallback( [ this ]()
 	{
 		Bools::toggleDebugInfoVisibility();
@@ -30,7 +30,7 @@ ImageState::ImageState( StateStack& stack, Context context )
 
 	auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	backButton->setPosition( ShowDebugInfoButton->getPosition() + sf::Vector2f( 0.f, 2.f * 70.f + 150.f ) );
-	backButton->setText( L"Õ¿«¿ƒ" );
+	backButton->setText( L"–ù–ê–ó–ê–î" );
 	backButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -78,7 +78,7 @@ bool ImageState::handleEvent( const sf::Event& sfevent )
 void ImageState::updateLabels()
 {
 	if ( Bools::getDebugInfoVisibility() )
-		m_ShowDebugInfoLabel->setText( L"¬ Àﬁ◊®Õ" );
+		m_ShowDebugInfoLabel->setText( L"–í–ö–õ–Æ–ß–Å–ù" );
 	else if ( !Bools::getDebugInfoVisibility() )
-		m_ShowDebugInfoLabel->setText( L"¬€ Àﬁ◊≈Õ" );
+		m_ShowDebugInfoLabel->setText( L"–í–´–ö–õ–Æ–ß–ï–ù" );
 }

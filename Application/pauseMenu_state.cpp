@@ -6,9 +6,9 @@
 #include "button.hpp"
 #include "label.hpp"
 
-#include < SFML/Graphics/RectangleShape.hpp >
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 PauseMenuState::PauseMenuState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -17,7 +17,7 @@ PauseMenuState::PauseMenuState( StateStack& stack, Context context )
 {
 	auto continueButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	continueButton->setPosition( 960.f, 600.f );
-	continueButton->setText( L"œ–ŒƒŒÀ∆»“‹" );
+	continueButton->setText( L"–ü–†–û–î–û–õ–ñ–ò–¢–¨" );
 	continueButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -25,7 +25,7 @@ PauseMenuState::PauseMenuState( StateStack& stack, Context context )
 
 	auto settingsButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	settingsButton->setPosition( continueButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	settingsButton->setText( L"Õ¿—“–Œ… »" );
+	settingsButton->setText( L"–ù–ê–°–¢–†–û–ô–ö–ò" );
 	settingsButton->setCallback( [ this ]()
 	{
 		requestStatePush( States::Settings );
@@ -33,7 +33,7 @@ PauseMenuState::PauseMenuState( StateStack& stack, Context context )
 
 	auto toMainMenuButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	toMainMenuButton->setPosition( settingsButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	toMainMenuButton->setText( L"¬€…“» ¬ √À¿¬ÕŒ≈ Ã≈Õﬁ" );
+	toMainMenuButton->setText( L"–í–´–ô–¢–ò –í –ì–õ–ê–í–ù–û–ï –ú–ï–ù–Æ" );
 	toMainMenuButton->setCallback( [ this ]()
 	{
 		requestStateClear();
@@ -42,13 +42,13 @@ PauseMenuState::PauseMenuState( StateStack& stack, Context context )
 
 	auto toDesktopButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	toDesktopButton->setPosition( toMainMenuButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	toDesktopButton->setText( L"¬€…“» Õ¿ –¿¡Œ◊»… —“ŒÀ" );
+	toDesktopButton->setText( L"–í–´–ô–¢–ò –ù–ê –†–ê–ë–û–ß–ò–ô –°–¢–û–õ" );
 	toDesktopButton->setCallback( [ this ]()
 	{
 		requestStatePush( States::Warning_ETD );
 	} );
 
-	auto pauseLabel = std::make_shared< GUI::Label >( L"»√–¿ œ–»Œ—“¿ÕŒ¬À≈Õ¿" , *context.fonts );
+	auto pauseLabel = std::make_shared< GUI::Label >( L"–ò–ì–†–ê –ü–†–ò–û–°–¢–ê–ù–û–í–õ–ï–ù–ê" , *context.fonts );
 	pauseLabel->setPosition( continueButton->getPosition() - sf::Vector2f( 0.f, 230.f ) );
 
 	m_container.pack( pauseLabel );

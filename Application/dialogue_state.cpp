@@ -7,9 +7,9 @@
 #include "resource_holder.hpp"
 #include "utilities.hpp"
 
-#include < SFML/Graphics/RectangleShape.hpp >
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 DialogueState::DialogueState( StateStack& stack, Context context )
 	:	State( stack, context )

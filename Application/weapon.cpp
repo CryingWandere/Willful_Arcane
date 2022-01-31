@@ -4,8 +4,8 @@
 #include "utilities.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/RenderTarget.hpp >
-#include < SFML/Graphics/RenderStates.hpp >
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
 
 //global region
 namespace

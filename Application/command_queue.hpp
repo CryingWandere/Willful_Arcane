@@ -2,7 +2,7 @@
 
 #include "command.hpp"
 
-#include < queue >
+#include <queue>
 
 class CommandQueue
 {

@@ -1,10 +1,10 @@
 #pragma once
 
-#include < SFML/System/NonCopyable.hpp >
-#include < SFML/Graphics/Drawable.hpp >
-#include < SFML/Graphics/Transformable.hpp >
+#include <SFML/System/NonCopyable.hpp>
+#include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Transformable.hpp>
 
-#include < memory >
+#include <memory>
 
 //Forward declaration
 namespace sf

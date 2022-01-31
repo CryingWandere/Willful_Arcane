@@ -1,6 +1,6 @@
 #include "state_stack.hpp"
 
-#include < cassert >
+#include <cassert>
 
 StateStack::StateStack( State::Context context )
 	:	m_stack()
@@ -38,31 +38,31 @@ void StateStack::handleEvent( const sf::Event& sfevent )
 	applyPendingChanges();
 }
 
-//Добавление сцены
+//Р”РѕР±Р°РІР»РµРЅРёРµ СЃС†РµРЅС‹
 void StateStack::pushState( States::ID stateID )
 {
 	m_pendingList.push_back( PendingChange( Push, stateID ) );
 }
 
-//Удаление сцены
+//РЈРґР°Р»РµРЅРёРµ СЃС†РµРЅС‹
 void StateStack::popState()
 {
 	m_pendingList.push_back( PendingChange( Pop ) );
 }
 
-//Очистка вектора сцен
+//РћС‡РёСЃС‚РєР° РІРµРєС‚РѕСЂР° СЃС†РµРЅ
 void StateStack::clearStates()
 {
 	m_pendingList.push_back( PendingChange( Clear ) );
 }
 
-//Если вектор сцен пуст
+//Р•СЃР»Рё РІРµРєС‚РѕСЂ СЃС†РµРЅ РїСѓСЃС‚
 bool StateStack::isEmpty() const
 {
 	return m_stack.empty();
 }
 
-//Создание сцены
+//РЎРѕР·РґР°РЅРёРµ СЃС†РµРЅС‹
 State::Pointer StateStack::createState( States::ID stateID )
 {
 	auto find = m_factories.find( stateID );
@@ -71,7 +71,7 @@ State::Pointer StateStack::createState( States::ID stateID )
 	return find->second();
 }
 
-//Применение изменений только после отрисовки сцены
+//РџСЂРёРјРµРЅРµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ РѕС‚СЂРёСЃРѕРІРєРё СЃС†РµРЅС‹
 void StateStack::applyPendingChanges()
 {
 	for ( PendingChange pchange : m_pendingList )

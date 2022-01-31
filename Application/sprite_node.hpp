@@ -2,7 +2,7 @@
 
 #include "scene_node.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
+#include <SFML/Graphics/Sprite.hpp>
 
 class SpriteNode : public SceneNode
 {

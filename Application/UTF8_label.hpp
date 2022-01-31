@@ -4,9 +4,9 @@
 #include "resource_identify.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Text.hpp>
 
-#include < string >
+#include <string>
 
 namespace GUI
 {

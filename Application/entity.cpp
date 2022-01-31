@@ -1,6 +1,6 @@
 #include "entity.hpp"
 
-#include < cassert >
+#include <cassert>
 
 Entity::Entity( int hitpoints )
 	:	m_velocity()

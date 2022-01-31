@@ -7,9 +7,9 @@
 
 #include "bools.hpp"
 
-#include < SFML/System/Time.hpp >
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 class Application
 {

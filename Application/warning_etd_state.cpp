@@ -7,8 +7,8 @@
 #include "label.hpp"
 #include "utilities.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 WarningState::WarningState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -27,7 +27,7 @@ WarningState::WarningState( StateStack& stack, Context context )
 
 	auto yesButton = std::make_shared< GUI::ShortButton >( *context.fonts, *context.textures );
 	yesButton->setPosition( m_windowSprite.getPosition().x - 140.f, m_windowSprite.getPosition().y + 105.f );
-	yesButton->setText( L"ƒ¿" );
+	yesButton->setText( L"–î–ê" );
 	yesButton->setCallback( [this]()
 	{
 		requestStateClear();
@@ -35,13 +35,13 @@ WarningState::WarningState( StateStack& stack, Context context )
 
 	auto noButton = std::make_shared< GUI::ShortButton >( *context.fonts, *context.textures );
 	noButton->setPosition( m_windowSprite.getPosition().x + 140.f, m_windowSprite.getPosition().y + 105.f );
-	noButton->setText( L"Õ≈“" );
+	noButton->setText( L"–ù–ï–¢" );
 	noButton->setCallback( [this]()
 	{
 		requestStatePop();
 	} );
 
-	auto infoLabel = std::make_shared< GUI::Label >( L"¬€…“» Õ¿ –¿¡Œ◊»… —“ŒÀ?", *context.fonts );
+	auto infoLabel = std::make_shared< GUI::Label >( L"–í–´–ô–¢–ò –ù–ê –†–ê–ë–û–ß–ò–ô –°–¢–û–õ?", *context.fonts );
 	infoLabel->setPosition( m_windowSprite.getPosition().x, m_windowSprite.getPosition().y - 95.f );
 
 	m_container.pack( infoLabel );

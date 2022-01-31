@@ -1,9 +1,9 @@
 #pragma once
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Texture.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Texture.hpp>
 
-#include < vector >
+#include <vector>
 
 class Animation
 {

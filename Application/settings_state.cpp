@@ -6,8 +6,8 @@
 #include "button.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 SettingsState::SettingsState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -19,7 +19,7 @@ SettingsState::SettingsState( StateStack& stack, Context context )
 
 	auto videoButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	videoButton->setPosition( 960.f, 600.f );
-	videoButton->setText( L"ÈÇÎÁÐÀÆÅÍÈÅ" );
+	videoButton->setText( L"Ð˜Ð—ÐžÐ‘Ð ÐÐ–Ð•ÐÐ˜Ð•" );
 	videoButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -28,14 +28,14 @@ SettingsState::SettingsState( StateStack& stack, Context context )
 
 	auto audioButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	audioButton->setPosition( videoButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	audioButton->setText( L"ÇÂÓÊ" );
+	audioButton->setText( L"Ð—Ð’Ð£Ðš" );
 	audioButton->setCallback( [ this ]()
 	{
 	} );
 
 	auto controlsButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	controlsButton->setPosition( audioButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	controlsButton->setText( L"ÓÏÐÀÂËÅÍÈÅ" );
+	controlsButton->setText( L"Ð£ÐŸÐ ÐÐ’Ð›Ð•ÐÐ˜Ð•" );
 	controlsButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -44,7 +44,7 @@ SettingsState::SettingsState( StateStack& stack, Context context )
 
 	auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	backButton->setPosition( controlsButton->getPosition() + sf::Vector2f( 0.f, 150.f ) );
-	backButton->setText( L"ÍÀÇÀÄ" );
+	backButton->setText( L"ÐÐÐ—ÐÐ”" );
 	backButton->setCallback( [ this ]()
 	{
 		requestStatePop();

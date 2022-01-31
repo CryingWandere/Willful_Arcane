@@ -4,11 +4,11 @@
 #include "resource_identify.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
-#include < functional >
-#include < string >
+#include <functional>
+#include <string>
 
 namespace GUI
 {

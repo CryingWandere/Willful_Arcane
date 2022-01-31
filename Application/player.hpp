@@ -2,9 +2,9 @@
 
 #include "command.hpp"
 
-#include < SFML/Window/Event.hpp >
+#include <SFML/Window/Event.hpp>
 
-#include < map >
+#include <map>
 
 //Forward declaration
 class CommandQueue;

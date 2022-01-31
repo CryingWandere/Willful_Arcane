@@ -7,7 +7,7 @@
 #include "text_node.hpp"
 #include "weapon.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
+#include <SFML/Graphics/Sprite.hpp>
 
 class Enemy : public Entity
 {

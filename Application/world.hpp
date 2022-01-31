@@ -17,11 +17,11 @@
 
 #include "dialogue.hpp"
 
-#include < SFML/System/NonCopyable.hpp >
-#include < SFML/Graphics/View.hpp >
-#include < SFML/Graphics/Texture.hpp >
+#include <SFML/System/NonCopyable.hpp>
+#include <SFML/Graphics/View.hpp>
+#include <SFML/Graphics/Texture.hpp>
 
-#include < array >
+#include <array>
 
 //Forward declaration
 namespace sf
