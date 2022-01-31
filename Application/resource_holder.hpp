@@ -1,11 +1,11 @@
 #pragma once
 
-#include < string >
-#include < map >
-#include < memory >
+#include <string>
+#include <map>
+#include <memory>
 
-#include < stdexcept >
-#include < cassert >
+#include <stdexcept>
+#include <cassert>
 
 
 template < typename Resource, typename Identifier >

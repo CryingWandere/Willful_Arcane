@@ -2,11 +2,11 @@
 
 #include "resource_identify.hpp"
 
-#include < SFML/System/Time.hpp >
-#include < SFML/Graphics/Color.hpp >
-#include < SFML/Graphics/Rect.hpp >
+#include <SFML/System/Time.hpp>
+#include <SFML/Graphics/Color.hpp>
+#include <SFML/Graphics/Rect.hpp>
 
-#include < vector >
+#include <vector>
 
 //FORWARD DECLARATION
 class Hero;

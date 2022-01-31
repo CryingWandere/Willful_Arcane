@@ -5,8 +5,8 @@
 #include "bools.hpp"
 #include "dialogue.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 class WhiteState : public State
 {

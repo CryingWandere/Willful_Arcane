@@ -3,7 +3,7 @@
 #include "entity.hpp"
 #include "resource_identify.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
+#include <SFML/Graphics/Sprite.hpp>
 
 class Weapon : public Entity
 {

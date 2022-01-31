@@ -4,8 +4,8 @@
 #include "resource_identify.hpp"
 #include "scene_node.hpp"
 
-#include < SFML/Graphics/Text.hpp >
-#include < SFML/Graphics/Font.hpp >
+#include <SFML/Graphics/Text.hpp>
+#include <SFML/Graphics/Font.hpp>
 
 class TextNode : public SceneNode
 {

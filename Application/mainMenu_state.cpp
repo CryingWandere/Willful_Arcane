@@ -7,9 +7,8 @@
 
 #include "bools.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
-
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 MainMenuState::MainMenuState( StateStack& stack, Context context )
 	:	State( stack, context )
 	,	m_container()
@@ -22,14 +21,14 @@ MainMenuState::MainMenuState( StateStack& stack, Context context )
 	
 	auto loadButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	loadButton->setPosition( 960.f, 500.f );
-	loadButton->setText( L"ÇÀÃÐÓÇÈÒÜ ÈÃÐÓ" );
+	loadButton->setText( L"Ð—ÐÐ“Ð Ð£Ð—Ð˜Ð¢Ð¬ Ð˜Ð“Ð Ð£" );
 	loadButton->setCallback( [ this ]()
 	{
 	} );
 
 	auto playButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	playButton->setPosition( loadButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	playButton->setText( L"ÍÎÂÀß ÈÃÐÀ" );
+	playButton->setText( L"ÐÐžÐ’ÐÐ¯ Ð˜Ð“Ð Ð" );
 	playButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -38,7 +37,7 @@ MainMenuState::MainMenuState( StateStack& stack, Context context )
 
 	auto settingsButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	settingsButton->setPosition( playButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	settingsButton->setText( L"ÏÀÐÀÌÅÒÐÛ" );
+	settingsButton->setText( L"ÐŸÐÐ ÐÐœÐ•Ð¢Ð Ð«" );
 	settingsButton->setCallback( [ this ]()
 	{
 		requestStatePush( States::Settings );
@@ -46,7 +45,7 @@ MainMenuState::MainMenuState( StateStack& stack, Context context )
 
 	auto creditsButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	creditsButton->setPosition( settingsButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	creditsButton->setText( L"ÑÎÇÄÀÒÅËÈ" );
+	creditsButton->setText( L"Ð¡ÐžÐ—Ð”ÐÐ¢Ð•Ð›Ð˜" );
 	creditsButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -55,7 +54,7 @@ MainMenuState::MainMenuState( StateStack& stack, Context context )
 
 	auto exitButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	exitButton->setPosition( creditsButton->getPosition() + sf::Vector2f( 0.f, 70.f ) );
-	exitButton->setText( L"ÂÛÉÒÈ ÍÀ ÐÀÁÎ×ÈÉ ÑÒÎË" );
+	exitButton->setText( L"Ð’Ð«Ð™Ð¢Ð˜ ÐÐ Ð ÐÐ‘ÐžÐ§Ð˜Ð™ Ð¡Ð¢ÐžÐ›" );
 	exitButton->setCallback( [ this ]()
 	{
 		requestStatePop();

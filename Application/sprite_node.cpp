@@ -1,6 +1,6 @@
 #include "sprite_node.hpp"
 
-#include < SFML/Graphics/RenderTarget.hpp >
+#include <SFML/Graphics/RenderTarget.hpp>
 
 SpriteNode::SpriteNode( const sf::Texture& texture )
 	:	m_sprite( texture )

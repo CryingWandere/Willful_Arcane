@@ -2,11 +2,11 @@
 
 #include "category.hpp"
 
-#include < SFML/Graphics.hpp >
+#include <SFML/Graphics.hpp>
 
-#include < memory >
-#include < vector >
-#include < set >
+#include <memory>
+#include <vector>
+#include <set>
 
 //Forward declaration
 struct Command;

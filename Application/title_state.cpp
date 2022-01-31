@@ -5,7 +5,7 @@
 #include "resource_holder.hpp"
 #include "utilities.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
 
 TitleState::TitleState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -16,11 +16,11 @@ TitleState::TitleState( StateStack& stack, Context context )
 	m_backgroundSprite.setTexture( context.textures->get( Textures::TitleScreen ) );
 
 	m_text.setFont( context.fonts->get( Fonts::RetroGaming ) );
-	m_text.setString( L"ÍÀÆÌÈÒÅ ËÞÁÓÞ ÊËÀÂÈØÓ ÄËß ÏÐÎÄÎËÆÅÍÈß" );
+	m_text.setString( L"ÐÐÐ–ÐœÐ˜Ð¢Ð• Ð›Ð®Ð‘Ð£Ð® ÐšÐ›ÐÐ’Ð˜Ð¨Ð£ Ð”Ð›Ð¯ ÐŸÐ ÐžÐ”ÐžÐ›Ð–Ð•ÐÐ˜Ð¯" );
 	m_text.setOutlineColor( sf::Color::Black );
 	m_text.setOutlineThickness( 1 );
 	m_text.setCharacterSize( 30 );
-	m_text.setColor( sf::Color::Color( 0xff, 0xff, 0xff, 250 ) );
+    m_text.setColor( { 0xff, 0xff, 0xff, 250 } );
 	centerOrigin( m_text );
 	m_text.setPosition( context.window->getSize().x / 2.f, context.window->getSize().y / 1.31 );
 }

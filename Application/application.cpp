@@ -2,6 +2,8 @@
 
 #include "application.hpp"
 
+#include <tgmath.h>
+
 #include "state.hpp"
 #include "state_identify.hpp"
 
@@ -34,7 +36,7 @@
 const sf::Time Application::TimePerFrame = sf::seconds( 1.f / 300.f );
 
 Application::Application( int screenX, int screenY )
-	:	m_renderWindow( sf::VideoMode( screenX, screenY ), "Willful Arcane [Alpha]", sf::Style::Fullscreen | sf::Style::Close )
+    :	m_renderWindow( sf::VideoMode( screenX, screenY ), "Willful Arcane [Alpha]", sf::Style::Fullscreen | sf::Style::Close )
 	,	m_textures()
 	,	m_fonts()
 	,	m_player()
@@ -45,8 +47,8 @@ Application::Application( int screenX, int screenY )
 	,	m_timeText()
 	,	m_timeUpdateTime()
 {
-	m_renderWindow.setKeyRepeatEnabled( false );
-	m_renderWindow.setMouseCursorVisible( false );
+    m_renderWindow.setKeyRepeatEnabled( false );
+    m_renderWindow.setMouseCursorVisible( false );
 
 	//Òåêñòóðû
 
@@ -85,19 +87,25 @@ Application::Application( int screenX, int screenY )
 	m_debugText.setFont( m_fonts.get( Fonts::RetroGaming ) );
 	m_debugText.setPosition( 5.f, 5.f );
 	m_debugText.setCharacterSize( 18 );
-	m_debugText.setColor( sf::Color::Color( 0xdd, 0xdd, 0xdd, 250 ) );
-	m_debugText.setOutlineColor( sf::Color::Color( 0x00, 0x00, 0x00, 250 ) );
+    m_debugText.setColor( sf::Color( 0xdd, 0xdd, 0xdd, 250 ) );
+    m_debugText.setOutlineColor( sf::Color( 0x00, 0x00, 0x00, 250 ) );
 	m_debugText.setOutlineThickness( 1 );
 
 	m_timeText.setFont( m_fonts.get( Fonts::RetroGaming ) );
 	m_timeText.setPosition( 1776.f, 5.f );
 	m_timeText.setCharacterSize( 18 );
-	m_timeText.setColor( sf::Color::Color( 0xdd, 0xdd, 0xdd, 250 ) );
-	m_timeText.setOutlineColor( sf::Color::Color( 0x00, 0x00, 0x00, 250 ) );
+    m_timeText.setColor( sf::Color( 0xdd, 0xdd, 0xdd, 250 ) );
+    m_timeText.setOutlineColor( sf::Color( 0x00, 0x00, 0x00, 250 ) );
 	m_timeText.setOutlineThickness( 1 );
 
 	registerStates();
 	m_stateStack.pushState( States::Title ); //debug
+}
+
+int main() {
+    Application app(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height);
+
+    app.run();
 }
 
 void Application::run()

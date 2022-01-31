@@ -3,8 +3,8 @@
 #include "utilities.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 WhiteState::WhiteState( StateStack& stack, Context context )
 	:	State( stack, context )

@@ -9,11 +9,11 @@
 
 #include "player.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
-#include < array >
-#include < string >
+#include <array>
+#include <string>
 
 class KeyBindingsState : public State
 {

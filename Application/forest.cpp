@@ -1,10 +1,12 @@
 #include "forest.hpp"
 
+#include <cmath>
+
 #include "text_node.hpp"
 
-#include "SFML/Graphics/RenderWindow.hpp"
+#include <SFML/Graphics/RenderWindow.hpp>
 
-//Класс игрового мира для второй локации
+//РљР»Р°СЃСЃ РёРіСЂРѕРІРѕРіРѕ РјРёСЂР° РґР»СЏ РІС‚РѕСЂРѕР№ Р»РѕРєР°С†РёРё
 
 Forest::Forest( sf::RenderWindow& window, FontHolder& fonts )
 	:	m_window( window )

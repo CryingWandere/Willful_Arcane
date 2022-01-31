@@ -1,5 +1,7 @@
 #include "world.hpp"
 
+#include <cmath>
+
 #include "bools.hpp"
 #include "text_node.hpp"
 
@@ -56,11 +58,15 @@ CommandQueue& World::getCommandQueue()
 
 void World::loadTextures()
 {
-	m_textures.load( Textures::Oleg, "Textures/heroes_bgs/warrior/warrior_default.png" );
+    m_textures.load( Textures::Oleg, "Textures/heroes_bgs/warrior/warrior_default.png" );
 
-	m_textures.load( Textures::PeasantGirl, "Textures/npcs_bgs/peasant_girl.png" );
+    m_textures.load( Textures::PeasantGirl, "Textures/npcs_bgs/peasant_girl.png" );
 
-	m_textures.load( Textures::Background01, "Textures/level_bgs/world01.png" );
+    m_textures.load( Textures::Background01, "Textures/level_bgs/world01.png" );
+
+    m_textures.load( Textures::UndeadOld, "Textures/enemies_bgs/undead_old.png" );
+
+    m_textures.load( Textures::Sword, "Textures/heroes_bgs/warrior/sword.png" );
 }
 
 void World::buildScene()
@@ -116,11 +122,11 @@ void World::spawnEnemies()
 	{
 		Spawner spawner = m_enemySpawners.back();
 
-		std::unique_ptr< Enemy > enemy( new Enemy( spawner.type, m_textures, m_fonts ) );
-		enemy->setPosition( spawner.x, spawner.y );
-		enemy->setVelocity( 1.f, 1.f );
+        std::unique_ptr< Enemy > enemy( new Enemy( spawner.type, m_textures, m_fonts ) );
+        enemy->setPosition( spawner.x, spawner.y );
+        enemy->setVelocity( 1.f, 1.f );
 
-		m_sceneLayers[ MainLayer ]->attachChild( std::move( enemy ) );
+        m_sceneLayers[ MainLayer ]->attachChild( std::move( enemy ) );
 
 		m_enemySpawners.pop_back();
 	}

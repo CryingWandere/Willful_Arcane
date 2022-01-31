@@ -4,12 +4,12 @@
 #include "state_identify.hpp"
 #include "resource_identify.hpp"
 
-#include < SFML/System/NonCopyable.hpp >
-#include < SFML/System/Time.hpp >
+#include <SFML/System/NonCopyable.hpp>
+#include <SFML/System/Time.hpp>
 
-#include < vector >
-#include < map >
-#include < functional >
+#include <vector>
+#include <map>
+#include <functional>
 
 //Forward declaration
 namespace sf

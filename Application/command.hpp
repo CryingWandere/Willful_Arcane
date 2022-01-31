@@ -2,10 +2,10 @@
 
 #include "category.hpp"
 
-#include < SFML/System/Time.hpp >
+#include <SFML/System/Time.hpp>
 
-#include < cassert >
-#include < functional >
+#include <cassert>
+#include <functional>
 
 class SceneNode;
 

@@ -1,6 +1,6 @@
 #include "animated_sprite.hpp"
 
-#include < cassert >
+#include <cassert>
 
 AnimatedSprite::FunctionType AnimatedSprite::defaultFunction = []()->void {};
 

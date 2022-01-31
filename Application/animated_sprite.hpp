@@ -2,13 +2,13 @@
 
 #include "animation.hpp"
 
-#include < SFML/Graphics/Drawable.hpp >
-#include < SFML/Graphics/Transformable.hpp >
-#include < SFML/Graphics/RenderTarget.hpp >
-#include < SFML/Graphics/RenderStates.hpp >
-#include < SFML/System/Time.hpp >
+#include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Transformable.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
+#include <SFML/System/Time.hpp>
 
-#include < functional >
+#include <functional>
 
 class AnimatedSprite : public sf::Drawable, public sf::Transformable
 {

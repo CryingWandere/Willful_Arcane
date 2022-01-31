@@ -3,10 +3,10 @@
 #include "state_identify.hpp"
 #include "resource_identify.hpp"
 
-#include < SFML/System/Time.hpp >
-#include < SFML/Window/Event.hpp >
+#include <SFML/System/Time.hpp>
+#include <SFML/Window/Event.hpp>
 
-#include < memory >
+#include <memory>
 
 //Forward declaration
 namespace sf

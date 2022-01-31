@@ -5,8 +5,8 @@
 #include "state.hpp"
 #include "container.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 class AlertState : public State
 {

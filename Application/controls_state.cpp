@@ -6,8 +6,8 @@
 #include "button.hpp"
 #include "resource_holder.hpp"
 
-#include < SFML/Graphics/RenderWindow.hpp >
-#include < SFML/Graphics/View.hpp >
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/View.hpp>
 
 ControlsState::ControlsState( StateStack& stack, Context context )
 	:	State( stack, context )
@@ -19,7 +19,7 @@ ControlsState::ControlsState( StateStack& stack, Context context )
 
 	auto keyBndButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	keyBndButton->setPosition( 960.f, 600.f );
-	keyBndButton->setText( L"ÏÐÈÂßÇÊÈ ÊËÀÂÈØ" );
+	keyBndButton->setText( L"ÐŸÐ Ð˜Ð’Ð¯Ð—ÐšÐ˜ ÐšÐ›ÐÐ’Ð˜Ð¨" );
 	keyBndButton->setCallback( [ this ]()
 	{
 		requestStatePop();
@@ -28,7 +28,7 @@ ControlsState::ControlsState( StateStack& stack, Context context )
 
 	auto backButton = std::make_shared< GUI::Button >( *context.fonts, *context.textures );
 	backButton->setPosition( keyBndButton->getPosition() + sf::Vector2f( 0.f, 2.f * 70.f + 150.f ) );
-	backButton->setText( L"ÍÀÇÀÄ" );
+	backButton->setText( L"ÐÐÐ—ÐÐ”" );
 	backButton->setCallback( [ this ]()
 	{
 		requestStatePop();

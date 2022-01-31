@@ -7,8 +7,8 @@
 #include "button.hpp"
 #include "long_button.hpp"
 
-#include < SFML/Graphics/Sprite.hpp >
-#include < SFML/Graphics/Text.hpp >
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 class ImageState : public State
 {

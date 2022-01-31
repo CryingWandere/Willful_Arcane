@@ -1,8 +1,8 @@
 #pragma once
 
-#include < string >
+#include <string>
 
-#include < SFML/System/Time.hpp >
+#include <SFML/System/Time.hpp>
 
 namespace Bools
 {

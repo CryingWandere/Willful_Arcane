@@ -3,7 +3,7 @@
 #include "command.hpp"
 #include "utilities.hpp"
 
-#include < cassert >
+#include <cassert>
 
 SceneNode::SceneNode()
 	:	m_children()
